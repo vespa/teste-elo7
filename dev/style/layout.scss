@@ -1,0 +1,34 @@
+
+.l-content {
+  width: 960px;
+  margin: 0 auto;
+    //
+    .opening{
+      margin-bottom:24px;
+      .opening-foto{
+        width: $layout-size;
+        &>figure{
+          position: relative;
+          &>img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        h1{
+          color: #fff;
+          font-size: 48px;
+          font-weight: 600;
+          position: absolute;
+          margin:-183px 0 0 294px;
+          @include t-shadow(1px 1px 4px, rgba(0,0,0,0.5))
+        }
+      }
+      .opening-legenda{
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        margin: 30px 50px 0;
+      }
+    }
+    //
+}

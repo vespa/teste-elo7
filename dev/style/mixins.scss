@@ -1,0 +1,5 @@
+@mixin t-shadow($positons, $color){
+  -webkit-text-shadow:: $positons  $color;
+  -moz-text-shadow:: $positons  $color;
+  text-shadow: $positons $color;
+}
