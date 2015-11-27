@@ -6,7 +6,11 @@ var gulp = require('gulp'),
 
 var browserSync = require('browser-sync');
 
-var reload = browserSync.reload;
+var reload = function(){
+  setTimeout(function(){
+    browserSync.reload();
+  },300);
+};
 
 gulp.task("move", function(){
     gulp.src([
@@ -37,7 +41,7 @@ gulp.task('styles', function () {
       './dev/style/main.scss'
     ])
     .pipe(sass())
-    .pipe(minifyCss())
+  //  .pipe(minifyCss())
     .pipe(gulp.dest('./app/style/'))
 });
 //
@@ -53,5 +57,5 @@ gulp.task("build", ["clean"], function(){
 });
 
 gulp.task('default', ['build'], function () {
-  gulp.run('browser-sync');
+    gulp.run('browser-sync');
 });
