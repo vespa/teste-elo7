@@ -1,6 +1,8 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    del = require("del");
+    del = require("del"),
+    concatCss = require("gulp-concat-css"),
+    minifyCss = require('gulp-minify-css');
 
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
@@ -20,14 +22,15 @@ gulp.task('browser-sync', function() {
 
 gulp.task('styles', function () {
   return gulp.src([
-      './dev/style/**.scss'
+      './dev/style/main.scss'
     ])
     .pipe(sass())
+    .pipe(minifyCss())
     .pipe(gulp.dest('./app/style/'))
 });
 //
 gulp.task('clean', function(cb) {
-  del([ "./app"],cb);
+  del([ "./app"], cb);
 });
 
 gulp.task("build", ["clean"], function(cb){
@@ -39,4 +42,3 @@ gulp.task("build", ["clean"], function(cb){
 gulp.task('default', ['build'], function () {
     gulp.run('browser-sync');
 });
-
