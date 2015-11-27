@@ -1,22 +1,10 @@
-
-/* COLORS */
-$main-fonts: Helvetica, arial, sans-serif;
-$main-font-color: #7D7873;
-$highligth-box-color:#F8F8F8;
-$main-h2-color:#7D7873;
-$main-h3-color:#FDB933;
-$main-links-color:#359C9C;
-$main-links-local:$main-font-color;
-
-/* FONTS */
-$main-font: Arial;
-
-
 * {
 	margin:0;
 	padding:0;
+	indent:0;
 	outline:0;
 	border:0;
 	font-family: $main-fonts;
 	color: $main-font-color;
+	box-sizing: border-box;
 }
