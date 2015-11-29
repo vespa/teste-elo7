@@ -8,6 +8,7 @@
 	font-family: $main-fonts;
 	color: $main-font-color;
 	box-sizing: border-box;
+	line-height: $main-line-height;
 }
 
 a{
@@ -15,8 +16,14 @@ a{
 }
 .row {
 	clear: both;
+	width: 100%;
+	display: table;
 }
 .column-4{
 	width:25%;
+	float:left;
+}
+.column-3{
+	width:33.33%;
 	float:left;
 }

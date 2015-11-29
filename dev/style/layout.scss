@@ -81,10 +81,41 @@
           clear:both;
           h2{
             text-align: center;
-            width: 250px;
+            font-size: 20px;
+            width: 270px;
             padding: 54px 0px;
+            text-transform: uppercase;
           }
         }
       }
     }
+    //
+    .topic-box{
+      margin-top:54px;
+      width: $layout-size;
+      .topic-box-row{
+        padding: 0 0 32px 0;
+        .topic-box-column{
+          padding: 0 20px;
+          text-align: justify;
+          &:last-child{
+            padding: 0 0 0 20px;
+          }
+          &:first-child{
+            padding: 0 20px 0 0 ;
+          }
+          h2{
+            font-size: 18px;
+            margin: 34px 0;
+            text-align: center;
+            text-transform: uppercase;
+          }
+          .topic-box-column-icon{
+            width:150px;
+            height: 150px;
+          }
+        }
+      }
+    }
+    //
 }
