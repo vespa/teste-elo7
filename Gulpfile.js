@@ -32,7 +32,7 @@ gulp.task('browser-sync', function() {
   gulp.watch('./dev/style/**/*.scss', ["styles",reload]);
   gulp.watch('./dev/**/*.html', ["move",reload]);
   //gulp.watch('dev/javascript/**/*.js');
- // gulp.watch('dev/images/**/*.js');
+  gulp.watch('dev/images/**/*',["move",reload]);
 });
 
 
@@ -41,7 +41,7 @@ gulp.task('styles', function () {
       './dev/style/main.scss'
     ])
     .pipe(sass())
-  //  .pipe(minifyCss())
+    .pipe(minifyCss())
     .pipe(gulp.dest('./app/style/'))
 });
 //
