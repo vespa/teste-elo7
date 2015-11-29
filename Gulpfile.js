@@ -41,7 +41,7 @@ gulp.task('styles', function () {
       './dev/style/main.scss'
     ])
     .pipe(sass())
-  //  .pipe(minifyCss())
+    .pipe(minifyCss())
     .pipe(gulp.dest('./app/style/'))
 });
 //
