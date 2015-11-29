@@ -1,13 +1,11 @@
 
 .l-content {
   width: 100%;
-  margin: 0 auto;
     //
     .opening{
       margin-bottom:24px;
       .opening-foto{
         width: $layout-size;
-        margin: 0 auto;
         &>figure{
           position: relative;
           &>img {
@@ -28,17 +26,65 @@
         font-weight: 500;
         font-size: 16px;
         text-align: center;
-        margin: 30px 50px 0;
+        padding: 30px 50px 0;
+        width: $layout-size;
+        line-height: $main-line-height;
       }
     }
     //
     .big-link{
       border-top: 2px solid $divisor-color;
-      padding: 24px 0 0;
+      padding: 24px 0 54px 0;
       font-size: 17px;
       text-transform: uppercase;
       font-weight: bold;
       margin: 0 auto;
       display: table;
+    }
+    //
+    .highlight-box{
+      background-color: $highligth-box-color;
+      .highlight-box-inner{
+        display: table;
+        padding: 54px 50px 54px 50px;
+        width: $layout-size;
+        margin:0 auto;
+        .highlight-box-video{
+          .highlight-box-video-media{
+            width:400px;
+            float: left;
+            &>img{
+              width: 100%;
+            }
+          }
+          .highlight-box-video-description{
+            padding: 0 0 0 50px;
+            display: table;
+            h2{
+              color:$main-h2-color;
+              text-transform: uppercase;
+              font-size:18px;
+            }
+            h3{
+              color:$main-h3-color;
+              font-weight: normal;
+              font-style: italic;
+            }
+            .highlight-box-video-text{
+              line-height: $main-line-height;
+              margin: 42px 0 0;
+            }
+          }
+        }
+        .highlight-box-team{
+          width: 100%;
+          clear:both;
+          h2{
+            text-align: center;
+            width: 250px;
+            padding: 54px 0px;
+          }
+        }
+      }
     }
 }
