@@ -92,9 +92,9 @@
     //
     .topic-box{
       margin-top:54px;
+      padding: 0 0 32px 0;
       width: $layout-size;
       .topic-box-row{
-        padding: 0 0 32px 0;
         .topic-box-column{
           padding: 0 20px;
           text-align: justify;
@@ -118,4 +118,39 @@
       }
     }
     //
+    .job-box{
+      width: $layout-size;
+      .job-box-opennig{
+        &> img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      h2{
+        font-size: 18px;
+        margin: 54px 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .job-box-list{
+        padding: 0 0 54px 0;
+        li.job-box-item{
+          a{
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 42px;
+            display: block;
+            span.local{
+              line-height: 42px;
+              float: right;
+              font-weight: normal;
+            }
+            &:hover{
+              background-color: $highligth-color;
+            }
+          }
+        }
+      }
+    }
+
 }
