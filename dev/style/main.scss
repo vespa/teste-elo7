@@ -3,3 +3,8 @@
 @import "base";
 @import "sprites";
 @import "layout";
+@media (max-width: 900px) {
+  @import "mobile/base";
+  @import "mobile/layout";
+  @import "mobile/sprites";
+}
