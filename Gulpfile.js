@@ -36,7 +36,7 @@ gulp.task('browser-sync', function() {
   });
   gulp.watch('./dev/style/**/**.scss', ["styles",reload]);
   gulp.watch('./dev/**/**.html', ["move",reload]);
-  gulp.watch('./dev/javascript/**/**.js',["javascript", reload]);
+  gulp.watch('./dev/javascript/**/**',["javascript", reload]);
   gulp.watch('./dev/images/**/**',["move",reload]);
 });
 
@@ -55,7 +55,7 @@ gulp.task('clean', function() {
         .pipe(clean({force: true}))
 });
 
-gulp.task("generate", ['styles', 'move', 'javascript']);
+gulp.task("generate", ['javascript','styles', 'move']);
 
 gulp.task("build", ["clean"], function(){
   gulp.run('generate');

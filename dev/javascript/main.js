@@ -42,10 +42,13 @@
           }
           return elem;
       },
-      extends: function(obj){
+      extends: function(moduleName, obj){
+        if(!this[moduleName]){
+          this[moduleName] = {};
+        }
         for(var x in obj){
           if(obj.hasOwnProperty(x)){
-            this[x] = obj[x];
+            this[moduleName][x] = obj[x];
           }
         }
         return this;
