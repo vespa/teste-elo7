@@ -1,9 +1,1 @@
-(function(w, name){
-  "use strict";
-  var _lib = {
-    fooo: function(){
-      // validando multiplas chamadas na lib principal
-    }
-  };
-  w[name].extends("foo",_lib);
-})(window, "_lib");
+!function(o,n){"use strict";var i={fooo:function(){}};o[n]["extends"]("foo",i)}(window,"_lib");

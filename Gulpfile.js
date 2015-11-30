@@ -2,7 +2,9 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     clean = require('gulp-clean'),
     concatCss = require("gulp-concat-css"),
-    minifyCss = require('gulp-minify-css');
+    minifyCss = require('gulp-minify-css'),
+    jshint = require('gulp-jshint')
+    uglify = require('gulp-uglify');
 
 var browserSync = require('browser-sync');
 
@@ -21,10 +23,19 @@ gulp.task("move", function(){
       "./dev/**/**.svg"
     ]).pipe(gulp.dest('./app'))
 });
-gulp.task("javascript", function(){
-    gulp.src([
+
+gulp.task("lint", function(){
+return gulp.src('"./dev/javascript/')
+    .pipe(jshint())
+    .pipe(jshint.reporter('fail'));
+});
+
+gulp.task("javascript", ['lint'],function(){
+    return gulp.src([
       "./dev/**/**.js"
-    ]).pipe(gulp.dest('./app'))
+    ])
+    .pipe(uglify())
+    .pipe(gulp.dest('./app'))
 });
 
 //dev

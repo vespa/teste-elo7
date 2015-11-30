@@ -22,14 +22,14 @@
       var boxeName = null,
           name = box.getAttribute("alt");
       if(name !== null){
-        boxeName = _lib.createElem("div", {class: "boxName", style: _mod.boxStyle});
+        boxeName = lib.createElem("div", {class: "boxName", style: _mod.boxStyle});
         boxeName.innerHTML = name;
         box.parentNode.style.overflow = "hidden";
         box.parentNode.style.height = window.getComputedStyle(box, null).height;
         setTimeout(function(){
           box.parentNode.appendChild(boxeName);
         },100);
-      };
+      }
       return boxeName;
     },
     addBehaviors: function(objects){
@@ -63,7 +63,7 @@
           }
           boxName.style.marginTop= (current+3) + "px";
         }, 30);
-      }
+      };
     }
   };
   //
@@ -92,7 +92,6 @@
       var boxes = _mod.findBoxes(),
           boxesNames = this.createBoxesName(boxes);
           this.addBehaviors(boxesNames);
-      ;
     }
   };
   // acrescenta o comportamento a uma global facilitando criação de testes
